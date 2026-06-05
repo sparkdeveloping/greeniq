@@ -269,7 +269,7 @@ function HeroVisual() {
 
       <div className="scan-card">
         <div className="scan-top">
-          <span>Live lawn diagnosis</span>
+          <span>Live lawn readout</span>
           <span className="pulse-dot" />
         </div>
         <div className="lawn-window">
@@ -385,7 +385,7 @@ function SystemSection() {
           </Reveal>
           <Reveal delay={0.08}>
             <p className="section-lede">
-              The current lawn care market is noisy: bags, bottles, generic calendars, and vague promises. GreenIQ’s strongest story is different. It is a sequence. The website should make that obvious in the first scroll.
+              Lawn care gets confusing fast: bags, bottles, generic calendars, and one-size-fits-all advice. GreenIQ makes it clearer with a four-phase sequence built around how turf actually wakes, grows, defends, and recovers.
             </p>
           </Reveal>
         </div>
@@ -415,7 +415,7 @@ function PhaseSelector() {
         <Reveal className="mx-auto max-w-3xl text-center">
           <p className="section-kicker justify-center">Four products. One complete system.</p>
           <h2 className="section-title">Every bottle answers a specific lawn signal.</h2>
-          <p className="section-lede mt-5">Instead of forcing users to read a product grid, the page should feel like a guided diagnosis. Click through the phases and the message changes with the season.</p>
+          <p className="section-lede mt-5">Each GreenIQ phase answers a different lawn signal. Click through the sequence to see when each formula belongs, what it supports, and why timing matters.</p>
         </Reveal>
 
         <div className="phase-shell mt-12">
@@ -503,10 +503,10 @@ function Analyzer() {
     <section id="lead" className="section-wrap analyzer-wrap">
       <div className="mx-auto grid max-w-7xl items-start gap-8 px-5 lg:grid-cols-[.95fr_1.05fr] lg:px-8">
         <Reveal>
-          <p className="section-kicker">Lead engine</p>
-          <h2 className="section-title">Make the visitor feel diagnosed before they ever buy.</h2>
+          <p className="section-kicker">Lawn phase finder</p>
+          <h2 className="section-title">Find the right GreenIQ phase for your lawn.</h2>
           <p className="section-lede mt-5">
-            This is the conversion move: instead of asking people to “contact us,” the site gives them a personal phase recommendation. It turns curiosity into a lead.
+            Move the sliders, choose what your lawn is showing, and GreenIQ will point you toward the seasonal phase that best matches your current conditions.
           </p>
           <div className="analyzer-panel mt-8">
             <label className="range-label">
@@ -690,9 +690,9 @@ function ScienceSection() {
         <div className="grid items-center gap-12 lg:grid-cols-[1fr_.95fr]">
           <Reveal>
             <p className="section-kicker">The science made visual</p>
-            <h2 className="section-title">Explain the lawn before selling the bottle.</h2>
+            <h2 className="section-title">Read the lawn before choosing the bottle.</h2>
             <p className="section-lede mt-5">
-              The best-performing landing page should teach just enough to make GreenIQ feel inevitable. Soil temperature, root depth, nutrient timing, water behavior, and seasonal stress become the visual language.
+              Better lawns start with better timing. Soil temperature, root depth, nutrient rhythm, watering behavior, and seasonal stress all help determine what your lawn can actually use.
             </p>
             <div className="science-grid mt-9">
               {scienceCards.map((card, index) => (
@@ -731,13 +731,13 @@ function GuideSection() {
           <div className="guide-card">
             <div>
               <p className="section-kicker">Free lawn guide</p>
-              <h2>Turn education into the highest-intent lead magnet.</h2>
+              <h2>Learn why lawns stall before summer.</h2>
               <p>
-                GreenIQ’s guide content is strong because it answers the question homeowners are already asking: “Why did my lawn stop improving?” The landing page should feature this as a trust-builder, not hide it in a footer.
+                The free GreenIQ guide explains the spring surge, the common May stall, color fade, root depth, and watering rhythm so homeowners can make better seasonal decisions.
               </p>
               <div className="guide-points">
                 <span>May stall</span>
-                <span>Color fade diagnosis</span>
+                <span>Color fade signals</span>
                 <span>Root depth checks</span>
                 <span>Watering rhythm</span>
               </div>
@@ -764,7 +764,7 @@ function CommercialSection() {
               <p className="section-kicker">GreenIQ Commercial</p>
               <h2>For serious operators managing turf at scale.</h2>
               <p>
-                Golf courses, lawn care companies, and property managers need repeatable performance. GreenIQ Commercial should feel like a professional access path: request review, qualify the operation, then receive commercial pricing and program details.
+                Golf courses, lawn care companies, and property managers need repeatable turf performance across larger properties. GreenIQ Commercial provides an access path for program details, commercial pricing, and seasonal guidance.
               </p>
               <div className="commercial-grid">
                 <span>Golf turf</span>
@@ -793,7 +793,7 @@ function SocialProofSection() {
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <Reveal className="proof-quote">
           <p>“The goal isn’t just greener grass. It’s healthier soil and a lawn that lasts.”</p>
-          <span>GreenIQ content angle • soil-first lawn education</span>
+          <span>Soil-first lawn education from GreenIQ</span>
         </Reveal>
       </div>
     </section>
@@ -807,7 +807,7 @@ function FAQSection() {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-[.8fr_1.2fr] lg:px-8">
         <Reveal>
           <p className="section-kicker">Decision clarity</p>
-          <h2 className="section-title">Answer objections before they become exits.</h2>
+          <h2 className="section-title">Clear answers before you order.</h2>
         </Reveal>
         <Reveal delay={0.08}>
           <div className="faq-list">
