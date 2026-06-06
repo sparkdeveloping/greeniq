@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
-function sanitize(value) {
-  return String(value || "").trim().slice(0, 1500);
+function sanitize(value, max = 1500) {
+  return String(value || "").trim().slice(0, max);
 }
 
 function isEmail(value) {
@@ -26,17 +26,18 @@ export async function POST(request) {
     return NextResponse.json({ message: "Invalid request." }, { status: 400 });
   }
 
-  if (payload.company) {
+  if (payload.website) {
     return NextResponse.json({ ok: true });
   }
 
   const inquiry = {
-    name: sanitize(payload.name),
-    email: sanitize(payload.email),
-    phone: sanitize(payload.phone),
-    lawnSize: sanitize(payload.lawnSize),
-    recommendedPhase: sanitize(payload.recommendedPhase),
-    notes: sanitize(payload.notes)
+    name: sanitize(payload.name, 160),
+    email: sanitize(payload.email, 220),
+    phone: sanitize(payload.phone, 80),
+    organization: sanitize(payload.organization, 220),
+    propertyType: sanitize(payload.propertyType, 180),
+    inquiryType: sanitize(payload.inquiryType, 180),
+    notes: sanitize(payload.notes, 1800)
   };
 
   if (!inquiry.name || !isEmail(inquiry.email)) {
@@ -48,13 +49,14 @@ export async function POST(request) {
   const from = process.env.RESEND_FROM || "GreenIQ <onboarding@resend.dev>";
 
   const html = `
-    <div style="font-family:Inter,Arial,sans-serif;line-height:1.6;color:#0b1710">
-      <h1 style="margin:0 0 16px;font-size:24px">New GreenIQ lawn plan inquiry</h1>
+    <div style="font-family:Inter,Arial,sans-serif;line-height:1.6;color:#0d1b16">
+      <h1 style="margin:0 0 16px;font-size:24px">New GreenIQ inquiry</h1>
       <p><strong>Name:</strong> ${escapeHtml(inquiry.name)}</p>
       <p><strong>Email:</strong> ${escapeHtml(inquiry.email)}</p>
       <p><strong>Phone:</strong> ${escapeHtml(inquiry.phone || "Not provided")}</p>
-      <p><strong>Lawn size:</strong> ${escapeHtml(inquiry.lawnSize || "Not provided")}</p>
-      <p><strong>Recommended phase:</strong> ${escapeHtml(inquiry.recommendedPhase || "Not calculated")}</p>
+      <p><strong>Organization:</strong> ${escapeHtml(inquiry.organization || "Not provided")}</p>
+      <p><strong>Property type:</strong> ${escapeHtml(inquiry.propertyType || "Not selected")}</p>
+      <p><strong>Inquiry type:</strong> ${escapeHtml(inquiry.inquiryType || "Not selected")}</p>
       <p><strong>Notes:</strong><br/>${escapeHtml(inquiry.notes || "None")}</p>
     </div>
   `;
@@ -70,7 +72,7 @@ export async function POST(request) {
         from,
         to,
         reply_to: inquiry.email,
-        subject: `GreenIQ inquiry: ${escapeHtml(inquiry.name)} — ${inquiry.recommendedPhase || "Lawn plan"}`,
+        subject: `GreenIQ inquiry: ${inquiry.name} — ${inquiry.inquiryType || "Website"}`,
         html
       })
     });

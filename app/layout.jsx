@@ -5,17 +5,19 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://greeniqlawn.com";
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "GreenIQ | Soil-First Lawn Science for Kansas & Midwest Lawns",
+    default: "GreenIQ | Corporate-Ready Lawn Science for Midwest Turf",
     template: "%s | GreenIQ"
   },
   description:
-    "GreenIQ is a Midwest-owned, soil-first lawn system built around seasonal phases: Launch X, Fortify+, Defend, and Recover. Get a clearer lawn plan without guessing.",
+    "GreenIQ is a soil-first turf system for homeowners, facilities teams, lawn care professionals, and commercial property programs. Explore a clear four-phase lawn care framework.",
   keywords: [
     "GreenIQ",
-    "lawn care Kansas",
+    "commercial lawn care products",
     "Midwest lawn care",
-    "soil first lawn care",
-    "lawn fertilizer system",
+    "Kansas lawn care",
+    "soil-first turf program",
+    "facilities lawn care",
+    "property management lawn products",
     "Launch X",
     "Fortify+",
     "Defend lawn",
@@ -25,9 +27,9 @@ export const metadata = {
     canonical: siteUrl
   },
   openGraph: {
-    title: "GreenIQ | Stop Guessing. Start Sequencing.",
+    title: "GreenIQ | Corporate-Ready Lawn Science",
     description:
-      "A premium, soil-first lawn system that matches the season your lawn is actually in.",
+      "A professional four-phase turf system for residential lawns, commercial properties, facilities teams, and lawn care operators.",
     url: siteUrl,
     siteName: "GreenIQ",
     images: [
@@ -35,7 +37,7 @@ export const metadata = {
         url: "https://greeniqlawn.com/cdn/shop/files/Fortify_WebHero.png?v=1778613296&width=3840",
         width: 1600,
         height: 900,
-        alt: "GreenIQ Fortify+ product in a Kansas lawn"
+        alt: "GreenIQ turf product system"
       }
     ],
     locale: "en_US",
@@ -43,9 +45,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "GreenIQ | Soil-First Lawn Science",
+    title: "GreenIQ | Corporate-Ready Lawn Science",
     description:
-      "Four seasonal phases. One smarter lawn system for Kansas and Midwest homeowners.",
+      "A four-phase turf program built for clear residential and commercial lawn decisions.",
     images: ["https://greeniqlawn.com/cdn/shop/files/Fortify_WebHero.png?v=1778613296&width=3840"]
   },
   icons: {
