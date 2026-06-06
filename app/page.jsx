@@ -100,16 +100,16 @@ const proofPoints = [
 
 const operatingPrinciples = [
   {
-    title: "Clarity before purchase",
-    body: "Visitors should understand the correct phase, use case, and expected role of each product before they enter the store."
+    title: "Seasonal clarity",
+    body: "Each product belongs to a clear part of the lawn care year, making it easier to understand what to apply and when to apply it."
   },
   {
-    title: "Commercial confidence",
-    body: "Corporate buyers need a site that communicates reliability, product logic, education, and professional fit without feeling overly casual."
+    title: "Professional property standards",
+    body: "GreenIQ supports lawns that represent homes, companies, churches, campuses, HOAs, and managed properties where appearance matters."
   },
   {
-    title: "System-led selling",
-    body: "GreenIQ is strongest when it is presented as a seasonal turf framework, not just a shelf of individual bottles."
+    title: "Soil-first confidence",
+    body: "The program is built around long-term turf health, not quick guesses, so customers can make decisions with more confidence."
   }
 ];
 
@@ -148,19 +148,19 @@ const bundles = [
 const faqs = [
   {
     q: "Is GreenIQ only for residential lawns?",
-    a: "No. GreenIQ supports homeowners and commercial users, including lawn care companies, golf courses, facilities teams, and property managers that need a repeatable seasonal turf approach."
+    a: "No. GreenIQ supports homeowners and professional users, including lawn care companies, golf courses, facilities teams, churches, HOAs, and property managers that need a repeatable seasonal turf approach."
   },
   {
-    q: "What makes the site more corporate?",
-    a: "The rebuild uses a more restrained visual system, stronger information hierarchy, professional terminology, commercial use cases, trust-focused sections, and more practical calls to action."
+    q: "Which product should I start with?",
+    a: "The right starting point depends on the season and the condition of the lawn. Launch X supports early activation, Fortify+ supports density and color, Defend supports summer resilience, and Recover supports restoration after heat stress."
   },
   {
-    q: "Can this still convert homeowners?",
-    a: "Yes. The site is more mature, but it still keeps the homeowner path clear through phase education, product cards, bundle recommendations, and simple calls to shop."
+    q: "How much area does one bottle cover?",
+    a: "GreenIQ products are positioned for up to 8,000 square feet of coverage, making the system practical for many residential lawns and smaller professional property needs."
   },
   {
-    q: "Can the inquiry form send emails?",
-    a: "Yes. The included API route can send form submissions through Resend when environment variables are added. Without email settings, submissions are logged server-side during development."
+    q: "Can commercial users request guidance?",
+    a: "Yes. Commercial customers, applicators, property teams, and organizations can submit an inquiry with property details so GreenIQ can recommend the most appropriate next step."
   }
 ];
 
@@ -356,8 +356,8 @@ function SegmentSection() {
       <div className="container segment-grid">
         <SectionHeader
           eyebrow="Audience clarity"
-          title="A professional website must speak to the buyer in front of it."
-          body="The corporate direction keeps GreenIQ polished for B2B audiences while still making the homeowner buying path simple and clear."
+          title="GreenIQ programs for homes, managed grounds, and professional turf needs."
+          body="From homeowners to property teams, each customer can see where they fit and which GreenIQ path makes sense."
         />
         <Reveal className="segment-panel" delay={0.08}>
           <div className="segment-tabs" role="tablist" aria-label="Customer segments">
@@ -398,9 +398,9 @@ function PrinciplesSection() {
     <section className="section muted-section">
       <div className="container">
         <SectionHeader
-          eyebrow="Corporate direction"
-          title="Less playful. More credible. Still premium."
-          body="The new aesthetic uses a restrained executive palette, clean product hierarchy, practical proof points, and subtle motion that feels expensive rather than experimental."
+          eyebrow="Professional standard"
+          title="Lawn care presented with order, confidence, and restraint."
+          body="GreenIQ pairs science-backed lawn care with a calm, premium experience that feels appropriate for both homeowners and professional property teams."
           align="center"
         />
         <div className="principle-grid">
@@ -424,7 +424,7 @@ function SystemSection() {
         <SectionHeader
           eyebrow="The GreenIQ system"
           title="A four-phase turf program customers can understand immediately."
-          body="Instead of presenting products as separate purchases, the site organizes GreenIQ around a seasonal program: activate, build, defend, and restore."
+          body="Each product has a defined seasonal role: activate, build, defend, and restore. The result is a lawn care path that is easy to follow and easier to trust."
           align="center"
         />
         <div className="timeline-board">
@@ -462,9 +462,9 @@ function CommercialSection() {
       <div className="container commercial-grid">
         <Reveal className="commercial-copy">
           <p className="eyebrow">Commercial readiness</p>
-          <h2>Built to feel credible for corporate and property-focused customers.</h2>
+          <h2>Commercial lawns need consistent presentation, clear planning, and dependable seasonal support.</h2>
           <p>
-            Corporate buyers care about risk, consistency, operational fit, and whether a product can be explained clearly to the people making property decisions. This direction gives GreenIQ a more mature presence for decision-makers who are managing real property standards.
+            For offices, churches, HOAs, campuses, retail properties, and managed grounds, GreenIQ provides a straightforward seasonal framework that helps teams protect curb appeal with greater confidence.
           </p>
           <div className="commercial-actions">
             <Button href={commercialUrl}>View commercial access</Button>
@@ -480,8 +480,8 @@ function CommercialSection() {
             {commercialUseCases.map((item) => <span key={item}>{item}</span>)}
           </div>
           <div className="procurement-box">
-            <h3>What a corporate buyer sees</h3>
-            <p>Clear positioning, organized product logic, commercial entry points, practical education, and a brand that feels prepared for professional conversations.</p>
+            <h3>Commercial expectations</h3>
+            <p>A clean product system, practical seasonal guidance, commercial access, and a lawn care approach that can be explained clearly to teams and stakeholders.</p>
           </div>
         </Reveal>
       </div>
@@ -494,9 +494,9 @@ function ProductsSection() {
     <section id="products" className="section products-section">
       <div className="container">
         <SectionHeader
-          eyebrow="Product pathways"
-          title="Give customers a confident next step."
-          body="The product section uses restrained cards and direct language so the visitor can move from education to purchase without confusion."
+          eyebrow="Seasonal product pathways"
+          title="Choose the program that matches the season and the property."
+          body="GreenIQ makes the next step simple: follow the full four-phase program or begin with the bundle that fits the property’s immediate needs."
           align="center"
         />
         <div className="bundle-grid">
@@ -518,9 +518,9 @@ function ProductsSection() {
         </div>
         <Reveal className="guide-card">
           <div>
-            <p className="eyebrow">Education asset</p>
-            <h3>Reinforce trust with useful seasonal guidance.</h3>
-            <p>GreenIQ’s guide content can support SEO, product education, and buyer confidence by explaining timing, symptoms, and seasonal turf strategy.</p>
+            <p className="eyebrow">Seasonal guide</p>
+            <h3>Understand the timing behind stronger turf.</h3>
+            <p>Use the seasonal guide to understand common lawn symptoms, application timing, and the role each phase plays in stronger turf performance.</p>
           </div>
           <Button href={guideUrl} variant="secondary">Open seasonal guide</Button>
         </Reveal>
@@ -563,14 +563,14 @@ function LeadForm() {
     <section id="inquiry" className="section inquiry-section">
       <div className="container inquiry-grid">
         <Reveal className="inquiry-copy">
-          <p className="eyebrow">Inquiry flow</p>
-          <h2>Make the next step feel professional, not generic.</h2>
+          <p className="eyebrow">Get guidance</p>
+          <h2>Tell GreenIQ about the property.</h2>
           <p>
-            The form is written for higher-quality conversations. It captures the property context, buyer intent, and contact details GreenIQ needs to respond with relevant guidance.
+            Share the property type, lawn goals, and current needs so GreenIQ can point you toward the most appropriate product path or commercial conversation.
           </p>
           <div className="inquiry-note">
-            <strong>Production ready:</strong>
-            <span>The API route is included. Add Resend environment variables to deliver submissions by email.</span>
+            <strong>Next step:</strong>
+            <span>A GreenIQ representative can review your request and follow up with guidance for the property.</span>
           </div>
         </Reveal>
         <Reveal className="form-card" delay={0.08}>
@@ -633,9 +633,9 @@ function FAQSection() {
     <section className="section faq-section">
       <div className="container faq-grid">
         <SectionHeader
-          eyebrow="Presentation notes"
-          title="What changed in this corporate rebuild?"
-          body="This version is built to be shown to a business owner with polished, client-facing language throughout."
+          eyebrow="Common questions"
+          title="Questions before you choose a product path."
+          body="Simple answers for homeowners, property teams, and professional users considering GreenIQ."
         />
         <div className="faq-list">
           {faqs.map((item, index) => (
@@ -656,7 +656,7 @@ function Footer() {
       <div className="container footer-grid">
         <div>
           <BrandMark />
-          <p>Soil-first lawn science presented with the clarity corporate and residential buyers need.</p>
+          <p>Soil-first lawn science for homeowners, property teams, and professional turf programs.</p>
         </div>
         <div>
           <span>Primary actions</span>
@@ -665,8 +665,8 @@ function Footer() {
           <a href="#inquiry">Request guidance</a>
         </div>
         <div>
-          <span>Site focus</span>
-          <p>Corporate aesthetic, seasonal product logic, commercial credibility, and SEO-ready structure.</p>
+          <span>GreenIQ focus</span>
+          <p>Seasonal product logic, soil-first education, commercial access, and clear guidance for stronger lawns.</p>
         </div>
       </div>
     </footer>
